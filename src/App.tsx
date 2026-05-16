@@ -4,9 +4,23 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+
+function App() {
+  const [count, setCount] = useState(0);
+  const [textoingresado, setTextoIngresado] = useState<string>('');
+  const [mostrarmodal, setMostrarModal] = useState<boolean>(false);
+  const manejarclick = () => {
+    if (textoingresado.trim() === '') {
+      alert('Por favor, ingresa un texto antes de hacer clic.');
+     return;    
+    }
+    setMostrarModal(true);
+  };
+  const cerrarModal = () => {
+    setMostrarModal(false);
+    setTextoIngresado('');
+  };
   return (
     <>
       <section id="center">
@@ -16,7 +30,7 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>Micomercio</h1>
           <p>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
@@ -29,7 +43,26 @@ function App() {
           Count is {count}
         </button>
       </section>
-
+      <div className="caja-entrada">
+        <input
+          type="text"
+          placeholder="Ingresa un texto"
+          value={textoingresado}
+          onChange={(e) => setTextoIngresado(e.target.value)}
+          className='input-texto'
+        />
+        <button onClick={manejarclick} className='boton-modal'>Mostrar Modal</button>
+      </div>
+      {mostrarmodal && (
+        <div className="fondo-modal">
+          <p>Texto ingresado: {textoingresado}</p>
+          <div className="contenido-modal">
+            <h2>lo que escribiste</h2>
+            <p className="texto-modal">{textoingresado}</p>
+            <button onClick={cerrarModal} className='boton-cerrar'>Cerrar</button>
+          </div>
+        </div>
+      )}
       <div className="ticks"></div>
 
       <section id="next-steps">
@@ -58,7 +91,7 @@ function App() {
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#social-icon"></use>
           </svg>
-          <h2>Connect with us</h2>
+          <h3>Connect with us</h3>
           <p>Join the Vite community</p>
           <ul>
             <li>
