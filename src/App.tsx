@@ -30,7 +30,7 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Micomercio</h1>
+          <h1>Mi Comercio</h1>
           <p>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
@@ -51,11 +51,12 @@ function App() {
           onChange={(e) => setTextoIngresado(e.target.value)}
           className='input-texto'
         />
-        <button onClick={manejarclick} className='boton-modal'>Mostrar Modal</button>
+        <button
+          onClick={manejarclick} className='boton-mostrar'>Mostrar Modal</button>
       </div>
       {mostrarmodal && (
         <div className="fondo-modal">
-          <p>Texto ingresado: {textoingresado}</p>
+          {/*<p>Texto ingresado: {textoingresado}</p>*/}
           <div className="contenido-modal">
             <h2>lo que escribiste</h2>
             <p className="texto-modal">{textoingresado}</p>
