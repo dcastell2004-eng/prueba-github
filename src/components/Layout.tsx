@@ -1,0 +1,33 @@
+import { NavLink, Outlet } from 'react-router-dom'
+import './Layout.css'
+
+function Layout() {
+  return (
+    <>
+      <nav className="navbar">
+        <span className="nav-logo">Mi Negocio</span>
+        <div className="nav-links">
+          <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Inicio
+          </NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Acerca de
+          </NavLink>
+          <NavLink to="/contacto" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Contacto
+          </NavLink>
+        </div>
+      </nav>
+
+      <main style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+        <Outlet />
+      </main>
+
+      <footer className="footer">
+        <p>Mi Negocio © 2025</p>
+      </footer>
+    </>
+  )
+}
+
+export default Layout
