@@ -85,3 +85,28 @@
   text-align: center;
   color: var(--text);
 }
+
+.nav-usuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.boton-logout {
+  padding: 6px 14px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.boton-logout:hover {
+  background: #e53e3e;
+  color: #fff;
+  border-color: #e53e3e;
+}

@@ -1,7 +1,16 @@
 import { NavLink, Outlet } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 import './Layout.css'
 
 function Layout() {
+  const { usuario, logout } = useAuth()
+  const navigate = useNavigate()
+
+  const manejarLogout = () => {
+    logout()
+    navigate('/login')
+  } 
+
   return (
     <>
       <nav className="navbar">

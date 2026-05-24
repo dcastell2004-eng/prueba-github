@@ -6,7 +6,6 @@ import logoImg from '../assets/logo.png'
 import '../App.css'
 
 
-
 function Home() {
   const [count, setCount] = useState(0);
   const [textoingresado, setTextoIngresado] = useState<string>('');
