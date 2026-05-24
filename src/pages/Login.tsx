@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth } from '../Context/AuthContext'
+import { useAuth } from '../context/AuthContext'
 import '../styles/Login.css'
 
 // Usuarios simulados (después esto vendrá del backend)

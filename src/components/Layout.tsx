@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import './Layout.css'
 
@@ -25,6 +25,12 @@ function Layout() {
           <NavLink to="/contacto" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Contacto
           </NavLink>
+        </div>
+       <div className="nav-usuario">
+          <span>👤 {usuario?.nombre}</span>
+          <button className="boton-logout" onClick={manejarLogout}>
+            Cerrar sesión
+          </button>
         </div>
       </nav>
 
