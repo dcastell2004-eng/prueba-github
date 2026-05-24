@@ -1,0 +1,53 @@
+.producto-contenedor {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+}
+
+.boton-volver {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: fit-content;
+  transition: background 0.2s;
+}
+
+.boton-volver:hover {
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.producto-detalle {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.detalle-fila {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.detalle-fila:last-child {
+  border-bottom: none;
+}
+
+.detalle-label {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.texto-alerta {
+  color: #e53e3e;
+  font-weight: 600;
+}

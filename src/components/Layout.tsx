@@ -25,6 +25,9 @@ function Layout() {
           <NavLink to="/contacto" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Contacto
           </NavLink>
+          <NavLink to="/inventario" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Inventario
+          </NavLink>
         </div>
        <div className="nav-usuario">
           <span>👤 {usuario?.nombre}</span>

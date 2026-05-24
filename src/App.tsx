@@ -6,6 +6,7 @@ import About from './pages/About'
 import Contacto from './pages/Contacto'
 import Producto from './pages/Producto'
 import Login from './pages/Login'
+import Inventario from './pages/Inventario'
 import './App.css'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contacto" element={<Contacto />} />
         <Route path="producto/:id" element={<Producto />} />
+        <Route path="inventario" element={<Inventario />} />
       </Route>
     </Routes>
   )
