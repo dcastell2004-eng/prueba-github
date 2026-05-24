@@ -1,6 +1,6 @@
 import { Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
-import { ReactElement } from 'react'
+import  type { ReactElement } from 'react'
 
 function PrivateRoute({ children }: { children: ReactElement }) {
   const { usuario } = useAuth()
