@@ -7,6 +7,7 @@ import Contacto from './pages/Contacto'
 import Producto from './pages/Producto'
 import Login from './pages/Login'
 import Inventario from './pages/Inventario'
+import Dashboard from './pages/Dashboard'
 import './App.css'
 
 function App() {
@@ -21,11 +22,11 @@ function App() {
           <Layout />
         </PrivateRoute>
       }>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contacto" element={<Contacto />} />
-        <Route path="producto/:id" element={<Producto />} />
+        <Route index element={<Dashboard />} />
         <Route path="inventario" element={<Inventario />} />
+        <Route path="producto/:id" element={<Producto />} />
+        <Route path="contacto" element={<Contacto />} />
+        <Route path="about" element={<About />} />
       </Route>
     </Routes>
   )

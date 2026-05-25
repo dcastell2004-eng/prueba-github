@@ -19,16 +19,16 @@ function Layout() {
           <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Inicio
           </NavLink>
-          <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Acerca de
+          <NavLink to="/inventario" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Inventario
           </NavLink>
           <NavLink to="/contacto" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Contacto
           </NavLink>
-          <NavLink to="/inventario" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Inventario
+          <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Acerca de
           </NavLink>
-        </div>
+       </div>
        <div className="nav-usuario">
           <span>👤 {usuario?.nombre}</span>
           <button className="boton-logout" onClick={manejarLogout}>
